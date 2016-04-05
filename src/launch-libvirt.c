@@ -1254,6 +1254,12 @@ construct_libvirt_xml_devices (guestfs_h *g,
     }
 #endif
 
+#if 0
+    /* This is disabled.  Pulling random numbers from /dev/random
+     * causes the appliance to pause for long periods.  We should
+     * use /dev/urandom, but for bogus reasons libvirt prevents that.
+     * https://bugzilla.redhat.com/show_bug.cgi?id=1074464#c7
+     */
     /* Add a random number generator (backend for virtio-rng). */
     start_element ("rng") {
       attribute ("model", "virtio");
@@ -1267,6 +1273,7 @@ construct_libvirt_xml_devices (guestfs_h *g,
         //string ("/dev/urandom");
       } end_element ();
     } end_element ();
+#endif
 
     /* virtio-scsi controller. */
     start_element ("controller") {
