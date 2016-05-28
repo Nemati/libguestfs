@@ -36,6 +36,7 @@ ifelse(REDHAT,1,
   hwdata
 
   dnl X11 environment
+  xterm
   /usr/bin/xinit
   /usr/bin/Xorg
   xorg-x11-drivers
@@ -62,6 +63,7 @@ ifelse(DEBIAN,1,
   ethtool
   hwdata
   xorg
+  xterm
   xserver-xorg-video-all
   metacity
   network-manager
@@ -79,6 +81,7 @@ ifelse(ARCHLINUX,1,
   curl
   ethtool
   hwdata
+  xterm
   xorg-xinit
   xorg-server
   xf86-video-*
@@ -98,6 +101,7 @@ ifelse(SUSE,1,
   curl
   ethtool
   hwdata
+  xterm
   /usr/bin/xinit
   /usr/bin/Xorg
   xf86-video-*
